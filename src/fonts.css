@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('./assets/fonts/SF-Pro-Display-Regular.otf') format('opentype');
+    /* Add more src declarations for other font weights/styles if needed */
+}

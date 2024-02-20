@@ -1,1 +1,29 @@
-<p>signup1 works!</p>
+
+<body>
+  <form id="signupForm">
+    <div id="step1" class="step">
+      <h2>Step 1: Personal Information</h2>
+      <input type="text" placeholder="First Name" name="firstName" required>
+      <input type="text" placeholder="Last Name" name="lastName" required>
+      <button class="nextBtn" type="button">Next</button>
+    </div>
+    <div id="step2" class="step">
+      <h2>Step 2: Contact Information</h2>
+      <input type="email" placeholder="Email Address" name="email" required>
+      <input type="tel" placeholder="Phone Number" name="phone" required>
+      <button class="prevBtn" type="button">Previous</button>
+      <button class="nextBtn" type="button">Next</button>
+    </div>
+    <div id="step3" class="step">
+      <h2>Step 3: Account Information</h2>
+      <input type="text" placeholder="Username" name="username" required>
+      <input type="password" placeholder="Password" name="password" required>
+      <button class="prevBtn" type="button">Previous</button>
+      <button type="submit">Sign Up</button>
+    </div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+
+

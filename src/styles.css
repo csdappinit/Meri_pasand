@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+@import './fonts.css';
+
+body {
+    background-color: #636366;
+    font-family: 'SF Pro', Arial, sans-serif;
+}
+.container {
+    width: 300px;
+    max-width: 320px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 36px;    
+}
+.password-message{
+    font-size: 11px;
+    font-weight: 300;
+    color: #636366;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 272px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: 290px;
+    padding: 10px 0; /* Adjust top and bottom padding to position text vertically */
+    border: none; /* Remove default border */
+    border-bottom: 1px solid #ccc; /* Add bottom border */
+    outline: none; /* Remove outline on focus */
+    font-size: 15px;
+    
+}
+.form-group input::placeholder {
+    color: #636366; /* Change the color of the placeholder text */
+}
+
+/* Styling for the input fields when focused */
+.form-group input:focus {
+    border-bottom: 2px solid #007bff; /* Increase border thickness on focus */
+}
+.form-group button {
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    margin-left: 75px;
+    background-image: linear-gradient(to right, #856A31, #EFB75E); 
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.form-group button:hover {
+    background-color: #0056b3;
+}
+.sign-up-with-text{
+    font-size: 15px;
+    color: #856A31;
+    text-align: center;
+}
+.social-icons {
+    display: flex;
+    margin-left: 0px;
+    justify-content: center; /* Align items horizontally at the center */
+    margin-top: 10px; /* Add some space between the text and the icons */
+}
+
+.social-icons img {
+    width: 40px; /* Adjust icon width as needed */
+    height: 40px; /* Adjust icon height as needed */
+    margin: 5px; /* Add some horizontal space between the icons */
+    
+}
+.privacy-text{
+    font-size: 11px;
+    color: #636366;
+    text-align: center;
+    line-height: 18px;
+}
+.notyet{
+    font-size: 16px;
+    text-align: center;
+}
+.password-for{
+    font-size: 12px;
+    text-align: end;
+}
