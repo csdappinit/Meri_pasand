@@ -1,29 +1,44 @@
-
-<body>
-  <form id="signupForm">
-    <div id="step1" class="step">
-      <h2>Step 1: Personal Information</h2>
-      <input type="text" placeholder="First Name" name="firstName" required>
-      <input type="text" placeholder="Last Name" name="lastName" required>
-      <button class="nextBtn" type="button">Next</button>
+<img src="../../../assets/image/Logo-Web-900px.png" alt="">
+<div class="container-form">
+    <h1 class="form-title">Let's start with some essential details</h1>
+    <form (ngSubmit)="onSubmit()" #regForm="ngForm">
+    <!-- One "tab" for each step in the form: -->
+    <div class="tab1" [hidden]="currentTab !== 0">
+        <p class="form-head">I am making this profile for</p>
+     
+          
+        <button class="input-button">Myself</button><br>
+        <button class="input-button">My son/ daughter</button><br>
+        <button class="input-button">My brother/ sister</button><br>
+        <button class="input-button">My nephew / niece</button><br>
+        <button class="input-button">A friend</button><br>
+          
     </div>
-    <div id="step2" class="step">
-      <h2>Step 2: Contact Information</h2>
-      <input type="email" placeholder="Email Address" name="email" required>
-      <input type="tel" placeholder="Phone Number" name="phone" required>
-      <button class="prevBtn" type="button">Previous</button>
-      <button class="nextBtn" type="button">Next</button>
+    <div class="tab2" [hidden]="currentTab !== 1">
+        Contact Info:
+        <p><input placeholder="E-mail..." [(ngModel)]="formData.email" name="email" required></p>
+        <p><input placeholder="Phone..." [(ngModel)]="formData.phone" name="phone" required></p>
     </div>
-    <div id="step3" class="step">
-      <h2>Step 3: Account Information</h2>
-      <input type="text" placeholder="Username" name="username" required>
-      <input type="password" placeholder="Password" name="password" required>
-      <button class="prevBtn" type="button">Previous</button>
-      <button type="submit">Sign Up</button>
+    <div class="tab3" [hidden]="currentTab !== 2">
+        Birthday:
+        <p><input placeholder="dd" [(ngModel)]="formData.dd" name="dd" required></p>
+        <p><input placeholder="mm" [(ngModel)]="formData.mm" name="mm" required></p>
+        <p><input placeholder="yyyy" [(ngModel)]="formData.yyyy" name="yyyy" required></p>
     </div>
-  </form>
-
-  <script src="script.js"></script>
-</body>
-
-
+    <div class="tab4" [hidden]="currentTab !== 3">
+        Login Info:
+        <p><input placeholder="Username..." [(ngModel)]="formData.uname" name="uname" required></p>
+        <p><input placeholder="Password..." [(ngModel)]="formData.pword" name="pword" type="password" required></p>
+    </div>
+    <div style="overflow:auto;">
+        <div style="float:right;">
+            
+            <button *ngIf="btn" class="button" type="button" id="nextBtn" (click)="nextTab()">{{ currentTab === steps.length - 1 ? 'Submit' : 'Next' }}</button>
+        </div>
+    </div>
+    <!-- Circles which indicate the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+        <span class="step" *ngFor="let step of steps; let i = index" [class.active]="i === currentTab"></span>
+    </div>
+</form>
+</div>
