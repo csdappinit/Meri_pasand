@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { MainSignupComponent } from './Signup/main-signup/main-signup.component';
 import { Signup1Component } from './Signup/signup1/signup1.component';
 import { LoginComponent } from './Login/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { LoginComponent } from './Login/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
